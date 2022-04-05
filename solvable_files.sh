@@ -110,7 +110,7 @@ function correct_mtime() {
 
 	echo "$filepath"
 
-	if [ "$action" == "fix" ]
+	if [ "$action" == "fix" ] && [ -f "$filepath" ]
 	then
 		touch -c "$filepath"
 		if [ "$scan_action" = "scan" ]
